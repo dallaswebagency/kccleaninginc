@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="KC Cleaning Inc. logo">
+  <rect x="2" y="2" width="60" height="60" rx="18" fill="#14284B"/>
+  <path d="M8 46 C24 38 40 38 56 30" stroke="#F4C430" stroke-width="5" stroke-linecap="round" fill="none" opacity=".95"/>
+  <g stroke="#FFFFFF" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M15 17 V43"/>
+    <path d="M30 17 L16.5 30 L30 43"/>
+    <path d="M51.5 21.5 A11.5 11.5 0 1 0 51.5 38.5"/>
+  </g>
+  <path d="M51 7 L52.6 11.4 L57 13 L52.6 14.6 L51 19 L49.4 14.6 L45 13 L49.4 11.4 Z" fill="#F4C430"/>
+</svg>

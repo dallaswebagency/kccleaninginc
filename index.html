@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KC Cleaning Inc. | Commercial &amp; Residential Cleaning in Fort Saskatchewan</title>
+<meta name="description" content="Family owned cleaning company providing high end commercial and residential cleaning in Fort Saskatchewan, Sherwood Park and surrounding areas.">
+<link rel="icon" href="images/kc-cleaning-logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14284B;
+  --ink-2:#22395F;
+  --river:#2F6E8E;
+  --canola:#F4C430;
+  --canola-deep:#D9A812;
+  --mist:#EAF2F6;
+  --paper:#FAFCFD;
+  --line:#CFDDE5;
+  --text:#1B2537;
+  --muted:#4E5C70;
+  --display:"Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+  --body:"Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --wrap:1240px;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(90px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--paper);color:var(--text);font:400 1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+a[href^="tel:"]{white-space:nowrap}
+:focus-visible{outline:3px solid var(--canola);outline-offset:3px;border-radius:4px}
+.wrap{width:min(var(--wrap),100% - 2.5rem);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);color:var(--ink);margin:0;line-height:1.02;letter-spacing:-.02em}
+h2{font-size:clamp(2.1rem,4.4vw,3.6rem);font-weight:700;font-variation-settings:"wdth" 88}
+p{margin:0 0 1em}
+.btn{display:inline-flex;align-items:center;gap:.6rem;font:700 1rem/1 var(--body);text-decoration:none;padding:1.05rem 1.6rem;border-radius:999px;border:2px solid transparent;cursor:pointer;transition:transform .2s ease,background .2s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-yellow{background:var(--canola);color:var(--ink)}
+.btn-yellow:hover{background:#FFD24A}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{background:var(--ink-2)}
+.btn-line{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* utility bar */
+.util{background:var(--ink);color:#DCE6F0;font-size:.875rem}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.55rem 0;flex-wrap:wrap}
+.util a{text-decoration:none;color:#fff;font-weight:600}
+.util a:hover{color:var(--canola)}
+.util .grp{display:flex;gap:1.4rem;align-items:center;flex-wrap:wrap}
+.util .grp span,.util .grp a{display:inline-flex;align-items:center;gap:.45rem}
+.util svg{width:15px;height:15px;color:var(--canola)}
+
+/* header */
+header.site{position:sticky;top:0;z-index:40;background:rgba(250,252,253,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:41;background:rgba(250,252,253,.94)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:.9rem 0}
+.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.brand img{width:52px;height:52px}
+.brand b{font:800 1.35rem/1 var(--display);color:var(--ink);letter-spacing:-.02em;display:block}
+.brand small{display:block;font-size:.8rem;color:var(--muted);margin-top:.25rem}
+nav.main ul{display:flex;gap:.3rem;list-style:none;margin:0;padding:0}
+nav.main a{display:block;text-decoration:none;font-weight:600;padding:.6rem .9rem;border-radius:999px;color:var(--ink)}
+nav.main a:hover{background:var(--mist)}
+nav.main a[aria-current]{background:var(--ink);color:#fff}
+.menu-btn{display:none;background:var(--ink);color:#fff;border:0;border-radius:12px;width:48px;height:48px;cursor:pointer}
+.menu-btn svg{width:22px;height:22px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:clamp(2.5rem,5vw,4.5rem) 0 0}
+.hero>.wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,4.5rem);align-items:end}
+.hero-copy{padding-bottom:clamp(2.5rem,6vw,5.5rem)}
+.area{display:inline-flex;align-items:center;gap:.6rem;font-weight:600;color:var(--river);margin-bottom:1.6rem}
+.area i{width:10px;height:10px;border-radius:50%;background:var(--canola);box-shadow:0 0 0 5px rgba(244,196,48,.25)}
+.hero h1{font-size:clamp(3rem,7.4vw,6.4rem);font-weight:800;font-variation-settings:"wdth" 80;line-height:.92;letter-spacing:-.035em}
+.hero h1 span{display:block}
+.hero h1 .l2{color:var(--river);font-weight:500;font-variation-settings:"wdth" 92}
+.hero-copy p{max-width:34rem;font-size:1.15rem;color:var(--muted);margin:1.8rem 0 2.2rem}
+.hero-ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+
+.pane{position:relative;border-radius:240px 240px 0 0;overflow:hidden;aspect-ratio:4/5;background:var(--mist);box-shadow:0 30px 60px -30px rgba(20,40,75,.45)}
+.pane img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pane .fog{filter:blur(9px) saturate(.4) brightness(1.18) contrast(.8);transform:scale(1.06);clip-path:inset(0 0 0 0);animation:wipe 2.6s 0.5s cubic-bezier(.65,.05,.3,1) forwards}
+.squeegee{position:absolute;top:-4%;bottom:-4%;left:-6%;width:26px;z-index:3;animation:blade 2.6s 0.5s cubic-bezier(.65,.05,.3,1) forwards}
+.squeegee::before{content:"";position:absolute;inset:0 7px;background:linear-gradient(90deg,var(--canola-deep),var(--canola) 45%,#FFE27A);border-radius:6px;box-shadow:4px 0 14px rgba(0,0,0,.25)}
+.squeegee::after{content:"";position:absolute;left:50%;top:50%;width:90px;height:12px;margin-top:-6px;background:var(--ink);border-radius:8px;transform:translateX(-100%)}
+@keyframes wipe{to{clip-path:inset(0 0 0 100%)}}
+@keyframes blade{0%{left:-6%}100%{left:106%;opacity:0}}
+.pane-tag{position:absolute;left:1.2rem;bottom:1.2rem;z-index:4;background:#fff;border-radius:18px;padding:.9rem 1.1rem;display:flex;gap:.8rem;align-items:center;max-width:78%;box-shadow:0 12px 30px -12px rgba(20,40,75,.4);opacity:0;animation:pop .6s 2.9s ease forwards}
+.pane-tag svg{width:34px;height:34px;flex:none;color:var(--river)}
+.pane-tag b{display:block;color:var(--ink);font-size:.95rem;line-height:1.2}
+.pane-tag span{font-size:.82rem;color:var(--muted)}
+@keyframes pop{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.sparkle{position:absolute;z-index:4;color:var(--canola);width:28px;height:28px;opacity:0;animation:twinkle 1.8s 3s ease-in-out infinite}
+.sparkle.s2{width:18px;height:18px;animation-delay:3.5s}
+@keyframes twinkle{0%,100%{opacity:0;transform:scale(.4) rotate(0)}50%{opacity:1;transform:scale(1) rotate(45deg)}}
+
+.trust-strip{background:var(--ink);color:#fff;position:relative;z-index:2}
+.trust-strip ul{list-style:none;margin:0;padding:1.3rem 0;display:flex;justify-content:space-between;gap:1.2rem 2rem;flex-wrap:wrap}
+.trust-strip li{display:flex;align-items:center;gap:.6rem;font-weight:600}
+.trust-strip svg{width:22px;height:22px;color:var(--canola);flex:none}
+
+/* welcome */
+.welcome{padding:clamp(4.5rem,9vw,8rem) 0}
+.welcome .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,6vw,6rem);align-items:center}
+.tools{position:relative}
+.tools img{border-radius:22px;aspect-ratio:3/4;object-fit:cover;width:100%}
+.tools .badge{position:absolute;right:-1.6rem;top:2rem;width:132px;height:132px;border-radius:50%;background:var(--canola);color:var(--ink);display:grid;place-items:center;text-align:center;font:700 .95rem/1.15 var(--display);padding:1rem;transform:rotate(-8deg)}
+.welcome h2{margin-bottom:1.6rem}
+.welcome .lead{font-size:1.3rem;line-height:1.55;color:var(--text);max-width:38rem}
+.mission{margin-top:2rem;padding:1.6rem 1.8rem;border-left:6px solid var(--canola);background:var(--mist);border-radius:0 18px 18px 0;max-width:38rem}
+.mission p{margin:0;color:var(--ink-2)}
+
+/* services index */
+.services{background:var(--ink);color:#fff;padding:clamp(4.5rem,9vw,7.5rem) 0;position:relative;overflow:hidden}
+.services h2{color:#fff}
+.services .head{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:3rem;flex-wrap:wrap}
+.services .head p{max-width:26rem;color:#B9C8DA;margin:0}
+.svc-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,5vw,4.5rem);align-items:start}
+.svc-list{list-style:none;margin:0;padding:0;border-top:1px solid rgba(255,255,255,.18)}
+.svc-list li{border-bottom:1px solid rgba(255,255,255,.18)}
+.svc-btn{all:unset;box-sizing:border-box;cursor:pointer;width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.3rem 0;font:700 clamp(1.45rem,2.8vw,2.2rem)/1.1 var(--display);font-variation-settings:"wdth" 85;color:#8FA6C2;transition:color .25s}
+.svc-btn:hover,.svc-btn[aria-expanded="true"]{color:#fff}
+.svc-btn .dot{width:44px;height:44px;border-radius:50%;border:2px solid rgba(255,255,255,.25);display:grid;place-items:center;flex:none;transition:background .25s,border-color .25s,transform .35s}
+.svc-btn .dot svg{width:18px;height:18px}
+.svc-btn[aria-expanded="true"] .dot{background:var(--canola);border-color:var(--canola);color:var(--ink);transform:rotate(45deg)}
+.svc-btn:focus-visible{outline:3px solid var(--canola);outline-offset:4px}
+.svc-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
+.svc-body>div{overflow:hidden}
+li.open .svc-body{grid-template-rows:1fr}
+.svc-body p{color:#C9D6E5;max-width:32rem;margin:0 0 1rem}
+.svc-body a{display:inline-block;color:var(--canola);font-weight:700;margin-bottom:1.5rem;text-underline-offset:4px}
+.svc-body img{display:none}
+.svc-stage{position:sticky;top:120px;aspect-ratio:4/5;border-radius:26px;overflow:hidden;background:var(--ink-2)}
+.svc-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .6s ease,transform 1.2s ease}
+.svc-stage img.on{opacity:1;transform:scale(1)}
+.svc-stage .cap{position:absolute;left:1rem;right:1rem;bottom:1rem;z-index:2;background:rgba(20,40,75,.82);backdrop-filter:blur(6px);border-radius:16px;padding:.9rem 1.1rem;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.svc-stage .cap span{color:var(--canola);font-variant-numeric:tabular-nums}
+.bubbles{position:absolute;inset:0;pointer-events:none;opacity:.5}
+.bubbles circle{fill:none;stroke:rgba(255,255,255,.12);stroke-width:1.5}
+
+/* schedule band */
+.plan{background:var(--canola);padding:clamp(3.5rem,7vw,5.5rem) 0;position:relative;overflow:hidden}
+.plan .wrap{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center;position:relative;z-index:1}
+.plan h2{font-size:clamp(2rem,4vw,3.2rem)}
+.plan p{color:var(--ink-2);max-width:32rem;margin:1rem 0 0;font-size:1.1rem}
+.freq{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.6rem}
+.freq button{font:600 1rem/1 var(--body);padding:.85rem 1.2rem;border-radius:999px;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;transition:background .2s,color .2s}
+.freq button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.freq-note{font-weight:600;color:var(--ink);min-height:1.6em;margin:0 0 1.4rem}
+.plan .swirl{position:absolute;right:-120px;top:-120px;width:340px;height:340px;color:rgba(20,40,75,.08)}
+
+/* why */
+.why{padding:clamp(4.5rem,9vw,8rem) 0}
+.why .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:center}
+.why h2{margin-bottom:1rem}
+.why .intro{color:var(--muted);max-width:30rem;margin-bottom:2.2rem}
+.checklist{list-style:none;margin:0;padding:0;background:#fff;border:1px solid var(--line);border-radius:24px;padding:.6rem 1.6rem;box-shadow:0 24px 50px -34px rgba(20,40,75,.45)}
+.checklist li{display:grid;grid-template-columns:38px 1fr;gap:1rem;padding:1.15rem 0;border-bottom:1px dashed var(--line)}
+.checklist li:last-child{border-bottom:0}
+.checklist .box{width:34px;height:34px;border-radius:10px;border:2px solid var(--river);display:grid;place-items:center;margin-top:2px}
+.checklist .box svg{width:20px;height:20px;color:var(--ink)}
+.checklist .box path{stroke-dasharray:30;stroke-dashoffset:30;transition:stroke-dashoffset .5s ease}
+.checklist.ticked .box{background:var(--canola);border-color:var(--canola)}
+.checklist.ticked .box path{stroke-dashoffset:0}
+.checklist li:nth-child(2) path{transition-delay:.2s}.checklist li:nth-child(3) path{transition-delay:.4s}.checklist li:nth-child(4) path{transition-delay:.6s}.checklist li:nth-child(5) path{transition-delay:.8s}
+.checklist .box{transition:background .3s,border-color .3s}
+.checklist b{display:block;color:var(--ink);font-size:1.08rem}
+.checklist span{color:var(--muted);font-size:.98rem}
+.why-photo{position:relative}
+.why-photo img{border-radius:26px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.why-photo .stamp{position:absolute;left:-1.5rem;bottom:2.5rem;background:var(--ink);color:#fff;border-radius:20px;padding:1.2rem 1.4rem;max-width:250px;box-shadow:0 20px 40px -20px rgba(0,0,0,.5)}
+.why-photo .stamp b{font:700 1.25rem/1.15 var(--display);display:block;color:var(--canola);margin-bottom:.3rem}
+.why-photo .stamp span{font-size:.92rem;color:#C9D6E5}
+
+/* about */
+.about{background:var(--mist);padding:clamp(4.5rem,9vw,7.5rem) 0}
+.about .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.about h2{margin-bottom:1.4rem}
+.about p{color:var(--text);max-width:40rem}
+.about .story{font:500 clamp(1.3rem,2.2vw,1.6rem)/1.45 var(--display);color:var(--ink);font-variation-settings:"wdth" 95;margin-bottom:1.4rem}
+.about .stack{position:relative;height:460px}
+.about .stack img{position:absolute;border-radius:22px;object-fit:cover;border:6px solid #fff;box-shadow:0 24px 44px -26px rgba(20,40,75,.6)}
+.about .stack .a{width:72%;height:78%;right:0;top:0}
+.about .stack .b{width:58%;height:52%;left:0;bottom:0;transform:rotate(-4deg)}
+
+/* testimonials */
+.reviews{padding:clamp(4.5rem,9vw,8rem) 0;position:relative}
+.reviews .top{display:flex;justify-content:space-between;align-items:end;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.stars{display:flex;gap:4px;color:var(--canola)}
+.stars svg{width:22px;height:22px}
+.quote-card{position:relative;background:var(--ink);color:#fff;border-radius:32px;padding:clamp(2rem,5vw,4rem);display:grid;grid-template-columns:auto 1fr;gap:clamp(1.2rem,3vw,2.5rem);min-height:320px}
+.quote-card .mark{font:800 8rem/0.8 var(--display);color:var(--canola)}
+.quote-card blockquote{margin:0;font:500 clamp(1.2rem,2.2vw,1.65rem)/1.5 var(--display);font-variation-settings:"wdth" 95;transition:opacity .35s ease}
+.quote-card blockquote.fade{opacity:0}
+.quote-card cite{display:block;margin-top:1.5rem;font:700 1rem/1 var(--body);font-style:normal;color:var(--canola)}
+.who{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
+.who button{font:600 .98rem/1 var(--body);border:2px solid var(--line);background:#fff;color:var(--ink);padding:.75rem 1.15rem;border-radius:999px;cursor:pointer;transition:all .2s}
+.who button:hover{border-color:var(--ink)}
+.who button[aria-selected="true"]{background:var(--canola);border-color:var(--canola)}
+
+/* faq */
+.faq{padding:0 0 clamp(4.5rem,9vw,8rem)}
+.faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,6vw,5rem);align-items:start}
+.faq .side p{color:var(--muted);margin-top:1rem;max-width:22rem}
+.faq .side a{font-weight:700;color:var(--river)}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.4rem 0;font:700 1.25rem/1.25 var(--display);color:var(--ink)}
+summary::-webkit-details-marker{display:none}
+summary .pm{width:34px;height:34px;border-radius:50%;background:var(--mist);display:grid;place-items:center;flex:none;transition:transform .3s,background .3s}
+summary .pm svg{width:16px;height:16px}
+details[open] summary .pm{transform:rotate(45deg);background:var(--canola)}
+details p{color:var(--muted);margin:0 0 1.5rem;max-width:40rem}
+
+/* contact */
+.contact{position:relative;padding:clamp(4.5rem,9vw,7rem) 0;color:#fff;overflow:hidden;background:var(--ink)}
+.contact .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.16}
+.contact .wrap{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:start}
+.contact h2{color:#fff;margin-bottom:1.2rem}
+.contact .intro{color:#C9D6E5;font-size:1.15rem;max-width:30rem}
+.cinfo{list-style:none;padding:0;margin:2rem 0 0;display:grid;gap:1.1rem}
+.cinfo li{display:grid;grid-template-columns:46px 1fr;gap:1rem;align-items:center}
+.cinfo .ic{width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.1);display:grid;place-items:center;color:var(--canola)}
+.cinfo .ic svg{width:20px;height:20px}
+.cinfo small{display:block;color:#9FB3CB;font-size:.85rem}
+.cinfo a{color:#fff;font-weight:600;text-decoration:none}
+.cinfo a:hover{color:var(--canola)}
+form.quote{background:#fff;color:var(--text);border-radius:28px;padding:clamp(1.6rem,4vw,2.6rem)}
+form.quote h3{font-size:1.7rem;margin-bottom:1.4rem}
+.field{margin-bottom:1.1rem}
+.field label{display:block;font-weight:600;margin-bottom:.4rem;color:var(--ink)}
+.field input,.field textarea{width:100%;font:inherit;padding:.9rem 1rem;border:2px solid var(--line);border-radius:14px;background:var(--paper);color:var(--text)}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--river)}
+.field textarea{min-height:130px;resize:vertical}
+.hp{position:absolute;left:-9999px}
+form.quote .btn{width:100%;justify-content:center}
+.form-msg{margin:1rem 0 0;font-weight:600;color:var(--river);min-height:1.4em}
+
+/* footer */
+footer.site{background:#0F1F3B;color:#B9C8DA;padding:4rem 0 0}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem;padding-bottom:3rem}
+footer .brand b{color:#fff}
+footer .brand small{color:#9FB3CB}
+footer .blurb{margin-top:1.2rem;max-width:24rem}
+footer h4{font:700 1.05rem/1 var(--display);color:#fff;margin:0 0 1.1rem}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.6rem}
+footer a{color:#DCE6F0;text-decoration:none}
+footer a:hover{color:var(--canola)}
+.fb{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.2rem;padding:.6rem 1rem;border-radius:999px;border:1px solid rgba(255,255,255,.2)}
+.fb svg{width:18px;height:18px}
+.legal{border-top:1px solid rgba(255,255,255,.12);padding:1.4rem 0;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.92rem}
+.legal a{color:var(--canola);font-weight:600}
+
+.mbar{display:none}
+
+@media (max-width:980px){
+  nav.main{position:fixed;inset:0;top:0;background:var(--ink);z-index:60;display:none;padding:calc(5.5rem + env(safe-area-inset-top,0px)) 1.5rem 2rem}
+  nav.main.open{display:block}
+  nav.main ul{flex-direction:column;gap:.4rem}
+  nav.main a{color:#fff;font:700 1.8rem/1.2 var(--display);padding:.7rem 0}
+  nav.main a[aria-current]{background:none;color:var(--canola)}
+  nav.main a:hover{background:none}
+  .menu-btn{display:grid;place-items:center;position:relative;z-index:61}
+  .head-cta{display:none}
+  .hero>.wrap,.welcome .wrap,.svc-grid,.plan .wrap,.why .wrap,.about .wrap,.faq .wrap,.contact .wrap{grid-template-columns:1fr}
+  .hero-copy{padding-bottom:0}
+  .pane{max-width:520px;width:100%;margin-inline:auto;border-radius:200px 200px 0 0}
+  .tools{max-width:420px}
+  .tools .badge{right:-.6rem}
+  .svc-stage{display:none}
+  .svc-body img{display:block;border-radius:18px;aspect-ratio:4/3;object-fit:cover;width:100%;margin-bottom:1rem}
+  .why-photo{order:-1;max-width:520px}
+  .why-photo .stamp{left:1rem}
+  .about .stack{height:380px;max-width:520px}
+  footer .cols{grid-template-columns:1fr 1fr}
+  footer .cols>div:first-child{grid-column:1/-1}
+}
+@media (max-width:640px){
+  .util .addr{display:none}
+  .util .wrap{justify-content:center}
+  .brand small{display:none}
+  .quote-card{grid-template-columns:1fr}
+  .quote-card .mark{font-size:5rem}
+  .trust-strip ul{justify-content:flex-start}
+  footer .cols{grid-template-columns:1fr}
+  body{padding-bottom:76px}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;position:fixed;left:0;right:0;bottom:0;z-index:50;padding:.7rem .9rem calc(.7rem + env(safe-area-inset-bottom,0px));background:rgba(250,252,253,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
+  .mbar .btn{justify-content:center;padding:.95rem 1rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></g></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></g></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.2-6.1"/></g></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></g></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></g></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0 14.6 9.4 24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v9h4v-9h3l.5-4h-3.5V8.9c0-.6.4-.9 1-.9z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  </defs>
+</svg>
+
+<div class="util">
+  <div class="wrap">
+    <div class="grp">
+      <a href="tel:+17809033790"><svg><use href="#i-phone"/></svg>780-903-3790</a>
+      <a href="tel:+17809130910">780-913-0910</a>
+      <a href="mailto:kccleaninginc@yahoo.com"><svg><use href="#i-mail"/></svg>kccleaninginc@yahoo.com</a>
+    </div>
+    <div class="grp addr">
+      <span><svg><use href="#i-pin"/></svg>Fort Saskatchewan, Alberta</span>
+      <span><svg><use href="#i-shield"/></svg>Registered and insured</span>
+    </div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="https://www.kccleaninginc.ca/" aria-label="KC Cleaning Inc. home">
+      <img src="images/kc-cleaning-logo.svg" alt="" width="52" height="52">
+      <span><b>KC Cleaning Inc.</b><small>Commercial &amp; residential cleaning</small></span>
+    </a>
+    <nav class="main" id="mainnav" aria-label="Main">
+      <ul>
+        <li><a href="https://www.kccleaninginc.ca/" aria-current="page">Home</a></li>
+        <li><a href="https://www.kccleaninginc.ca/about-us">About Us</a></li>
+        <li><a href="https://www.kccleaninginc.ca/services-offered">Services Offered</a></li>
+        <li><a href="https://www.kccleaninginc.ca/contact-us">Contact us</a></li>
+        <li><a href="https://www.kccleaninginc.ca/gallery">Gallery</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-yellow head-cta" href="#contact">Get a free quote</a>
+    <button class="menu-btn" aria-controls="mainnav" aria-expanded="false" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main-content">
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <div class="area"><i></i>Fort Saskatchewan, Sherwood Park and surrounding areas</div>
+      <h1><span>Trust us with the mess</span><span class="l2">while you handle the rest.</span></h1>
+      <p>A family owned cleaning company providing high end services for commercial and residential settings.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-ink" href="#contact">Get a free quote</a>
+        <a class="btn btn-line" href="tel:+17809033790"><svg><use href="#i-phone"/></svg>780-903-3790</a>
+      </div>
+    </div>
+    <div class="pane" aria-label="A freshly cleaned kitchen">
+      <img src="images/post-construction-cleaning.jpg" alt="Bright, freshly cleaned modern kitchen and living area">
+      <img class="fog" src="images/post-construction-cleaning.jpg" alt="" aria-hidden="true">
+      <div class="squeegee" aria-hidden="true"></div>
+      <svg class="sparkle" style="right:18%;top:22%" aria-hidden="true"><use href="#i-spark"/></svg>
+      <svg class="sparkle s2" style="right:34%;top:36%" aria-hidden="true"><use href="#i-spark"/></svg>
+      <div class="pane-tag">
+        <svg><use href="#i-leaf"/></svg>
+        <div><b>Eco-friendly products</b><span>Safe for your family, pets and the environment</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="trust-strip">
+    <div class="wrap">
+      <ul>
+        <li><svg><use href="#i-home"/></svg>Family owned</li>
+        <li><svg><use href="#i-shield"/></svg>Registered and insured</li>
+        <li><svg><use href="#i-check"/></svg>WCB covered, employees bonded</li>
+        <li><svg><use href="#i-cal"/></svg>One-time to daily schedules</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="welcome" id="welcome">
+  <div class="wrap">
+    <div class="tools">
+      <img src="images/kc-cleaning-tools.jpg" alt="Cleaning brushes and a dustpan hanging neatly on a white wall" loading="lazy">
+      <div class="badge">Proudly local to Fort Saskatchewan</div>
+    </div>
+    <div>
+      <h2>Welcome to KC Cleaning Inc.</h2>
+      <p class="lead">We are a family owned cleaning company that specializes in providing high end services for commercial and residential settings in Fort Saskatchewan and surrounding areas.</p>
+      <div class="mission">
+        <p>Our mission is to enhance productivity, professional appearance and morale for our clients by delivering a clean, hygienic space where they can live, work, and thrive.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services" aria-labelledby="svc-h">
+  <svg class="bubbles" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <circle cx="1100" cy="90" r="120"/><circle cx="1040" cy="210" r="46"/><circle cx="80" cy="640" r="90"/><circle cx="180" cy="560" r="28"/>
+  </svg>
+  <div class="wrap">
+    <div class="head">
+      <h2 id="svc-h">Services</h2>
+      <p>From your home to your office to your RV, choose the clean that fits your space.</p>
+    </div>
+    <div class="svc-grid">
+      <ul class="svc-list">
+        <li class="open">
+          <button class="svc-btn" aria-expanded="true" aria-controls="s1" data-i="0">Residential Cleaning<span class="dot"><svg><use href="#i-plus"/></svg></span></button>
+          <div class="svc-body" id="s1"><div>
+            <img src="images/residential-cleaning.jpg" alt="Polished coffee pots and a candle on a tidy kitchen tray" loading="lazy">
+            <p>Comprehensive home cleaning with eco-friendly products. Routine schedules available for consistent cleanliness.</p>
+            <a href="https://www.kccleaninginc.ca/services-offered">More info</a>
+          </div></div>
+        </li>
+        <li>
+          <button class="svc-btn" aria-expanded="false" aria-controls="s2" data-i="1">Commercial Cleaning<span class="dot"><svg><use href="#i-plus"/></svg></span></button>
+          <div class="svc-body" id="s2"><div>
+            <img src="images/commercial-cleaning.jpg" alt="Gloved hand wiping down an office desk" loading="lazy">
+            <p>Professional cleaning for businesses of all sizes. Customizable schedules for a pristine work environment.</p>
+            <a href="https://www.kccleaninginc.ca/services-offered">More info</a>
+          </div></div>
+        </li>
+        <li>
+          <button class="svc-btn" aria-expanded="false" aria-controls="s3" data-i="2">Move-In/Move-Out Cleaning<span class="dot"><svg><use href="#i-plus"/></svg></span></button>
+          <div class="svc-body" id="s3"><div>
+            <img src="images/move-in-move-out-cleaning.jpg" alt="Cordless vacuum cleaning confetti from a carpet" loading="lazy">
+            <p>Thorough cleaning for moving in or out. Deep clean kitchens, bathrooms, and all surfaces for a fresh start.</p>
+            <a href="https://www.kccleaninginc.ca/services-offered">More info</a>
+          </div></div>
+        </li>
+        <li>
+          <button class="svc-btn" aria-expanded="false" aria-controls="s4" data-i="3">Post-Construction Cleaning<span class="dot"><svg><use href="#i-plus"/></svg></span></button>
+          <div class="svc-body" id="s4"><div>
+            <img src="images/post-construction-cleaning.jpg" alt="Newly finished modern kitchen, clean and bright" loading="lazy">
+            <p>Detailed cleaning for renovated or newly built properties. Give your new space the shine it deserves!</p>
+            <a href="https://www.kccleaninginc.ca/services-offered">More info</a>
+          </div></div>
+        </li>
+        <li>
+          <button class="svc-btn" aria-expanded="false" aria-controls="s5" data-i="4">Rental &amp; Airbnb Cleaning<span class="dot"><svg><use href="#i-plus"/></svg></span></button>
+          <div class="svc-body" id="s5"><div>
+            <img src="images/rental-airbnb-cleaning.jpg" alt="Cleaning cart and vacuum in a hotel-style hallway" loading="lazy">
+            <p>Timely cleans for your rental or Airbnb property. Ensure your renters feel at home with a pristine environment!</p>
+            <a href="https://www.kccleaninginc.ca/services-offered">More info</a>
+          </div></div>
+        </li>
+        <li>
+          <button class="svc-btn" aria-expanded="false" aria-controls="s6" data-i="5">RV Cleaning<span class="dot"><svg><use href="#i-plus"/></svg></span></button>
+          <div class="svc-body" id="s6"><div>
+            <img src="images/rv-cleaning.jpg" alt="Travel trailer lit up at dusk" loading="lazy">
+            <p>Deep clean your RV at the beginning of season, mid season and end of season. Extend your vacation one more day and leave the mess to us!</p>
+            <a href="https://www.kccleaninginc.ca/services-offered">More info</a>
+          </div></div>
+        </li>
+      </ul>
+      <div class="svc-stage" aria-hidden="true">
+        <img class="on" src="images/residential-cleaning.jpg" alt="">
+        <img src="images/commercial-cleaning.jpg" alt="" loading="lazy">
+        <img src="images/move-in-move-out-cleaning.jpg" alt="" loading="lazy">
+        <img src="images/post-construction-cleaning.jpg" alt="" loading="lazy">
+        <img src="images/rental-airbnb-cleaning.jpg" alt="" loading="lazy">
+        <img src="images/rv-cleaning.jpg" alt="" loading="lazy">
+        <div class="cap"><b id="cap-name">Residential Cleaning</b><span id="cap-n">1 of 6</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="plan" aria-labelledby="plan-h">
+  <svg class="swirl" viewBox="0 0 100 100" aria-hidden="true"><use href="#i-spark"/></svg>
+  <div class="wrap">
+    <div>
+      <h2 id="plan-h">Customize your cleaning plan</h2>
+      <p>Book the clean that matches your week. We will meet your schedule needs!</p>
+    </div>
+    <div>
+      <div class="freq" role="group" aria-label="Cleaning frequency">
+        <button type="button" aria-pressed="false" data-note="A single deep clean, whenever you need it.">One-time</button>
+        <button type="button" aria-pressed="false" data-note="A fresh reset once a month.">Monthly</button>
+        <button type="button" aria-pressed="true" data-note="Every other week, so the mess never builds up.">Bi-weekly</button>
+        <button type="button" aria-pressed="false" data-note="Every week, for a space that always feels ready.">Weekly</button>
+        <button type="button" aria-pressed="false" data-note="Every day, ideal for busy offices and commercial spaces.">Daily</button>
+      </div>
+      <p class="freq-note" aria-live="polite">Every other week, so the mess never builds up.</p>
+      <a class="btn btn-ink" href="#contact" id="plan-cta">Get a free quote for bi-weekly cleaning</a>
+    </div>
+  </div>
+</section>
+
+<section class="why" aria-labelledby="why-h">
+  <div class="wrap">
+    <div>
+      <h2 id="why-h">A clean you can count on</h2>
+      <p class="intro">We pride ourselves on our attention to detail and commitment to customer satisfaction.</p>
+      <ul class="checklist" id="checklist">
+        <li><span class="box"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><div><b>Registered and insured</b><span>We are a professional corporation that is registered and insured.</span></div></li>
+        <li><span class="box"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><div><b>WCB and bonded employees</b><span>We have WCB and all employees are bonded.</span></div></li>
+        <li><span class="box"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><div><b>Eco-friendly products</b><span>Safe for your family, pets, and the environment.</span></div></li>
+        <li><span class="box"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><div><b>Trained professionals</b><span>Our team of trained professionals ensures a safe and clean environment.</span></div></li>
+        <li><span class="box"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><div><b>Flexible schedules</b><span>Customizable cleaning plans make it easy to maintain a clean space.</span></div></li>
+      </ul>
+    </div>
+    <div class="why-photo">
+      <img src="images/commercial-cleaning.jpg" alt="Cleaner in blue gloves wiping a work surface" loading="lazy">
+      <div class="stamp"><b>High attention to detail</b><span>Reliable, dependable and trustworthy, in homes and offices alike.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about" aria-labelledby="about-h">
+  <div class="wrap">
+    <div>
+      <h2 id="about-h">About us</h2>
+      <p class="story">KC Cleaning Inc. is a local cleaning service provider based in Fort Saskatchewan, Alberta.</p>
+      <p>We are a registered and insured company that is dedicated to offering high-quality cleaning services to both residential and commercial clients. Whether you need regular home cleaning, a pristine office space, a thorough move-in/move-out clean, a post construction clean, a rental property clean, or an RV clean, we are here to meet your needs.</p>
+      <a class="btn btn-ink" href="https://www.kccleaninginc.ca/about-us" style="margin-top:.6rem">More about us</a>
+    </div>
+    <div class="stack">
+      <img class="a" src="images/rental-airbnb-cleaning.jpg" alt="Professional cleaning cart in a hallway" loading="lazy">
+      <img class="b" src="images/residential-cleaning.jpg" alt="Spotless kitchen tray with coffee pots" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="reviews" aria-labelledby="rev-h">
+  <div class="wrap">
+    <div class="top">
+      <h2 id="rev-h">Testimonials</h2>
+      <div class="stars" aria-label="Five star reviews"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+    </div>
+    <div class="quote-card">
+      <div class="mark" aria-hidden="true">“</div>
+      <div>
+        <blockquote id="q-text">KC Cleaning Inc. cleans our commercial spaces. They do a fantastic job! Every time we come into a beautiful clean office. They are reliable, dependable and trustworthy. They have a high attention to detail. We highly recommend them.</blockquote>
+        <cite id="q-name">Chantelle</cite>
+      </div>
+    </div>
+    <div class="who" role="tablist" aria-label="Choose a testimonial">
+      <button role="tab" aria-selected="true" data-q="0">Chantelle</button>
+      <button role="tab" aria-selected="false" data-q="1">Sarah</button>
+      <button role="tab" aria-selected="false" data-q="2">Dawn &amp; Stan</button>
+      <button role="tab" aria-selected="false" data-q="3">Trevor &amp; Kelly</button>
+      <button role="tab" aria-selected="false" data-q="4">Jess</button>
+      <button role="tab" aria-selected="false" data-q="5">Teresa</button>
+    </div>
+  </div>
+</section>
+
+<section class="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="side">
+      <h2 id="faq-h">Frequently asked questions</h2>
+      <p>Have another question? Call <a href="tel:+17809033790">780-903-3790</a> or email us anytime.</p>
+    </div>
+    <div>
+      <details open><summary>What areas do you serve?<span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>We serve clients in Fort Saskatchewan, Sherwood Park and surrounding areas.</p></details>
+      <details><summary>Are you registered and insured?<span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Yes! We are a professional corporation that is registered and insured. We also have WCB and all employees are bonded.</p></details>
+      <details><summary>What cleaning products do you use?<span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>We use eco-friendly cleaning products that are safe for your family, pets, and the environment.</p></details>
+      <details><summary>How can I schedule a cleaning service?<span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>You can schedule a cleaning service by contacting us through our email or by phone.</p></details>
+      <details><summary>Can I customize my cleaning plan?<span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Absolutely! You can book a one-time, monthly, bi-weekly, weekly, or daily clean. We will meet your schedule needs!</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="con-h">
+  <img class="bg" src="images/kc-cleaning-tools.jpg" alt="" aria-hidden="true" loading="lazy">
+  <div class="wrap">
+    <div>
+      <h2 id="con-h">Contact us</h2>
+      <p class="intro">Reach out to us today to schedule your cleaning service or get a free quote.</p>
+      <ul class="cinfo">
+        <li><span class="ic"><svg><use href="#i-pin"/></svg></span><div><small>Location</small>KC Cleaning Inc, Fort Saskatchewan, Alberta, Canada</div></li>
+        <li><span class="ic"><svg><use href="#i-phone"/></svg></span><div><small>Phone</small><a href="tel:+17809033790">780-903-3790</a> or <a href="tel:+17809130910">780-913-0910</a></div></li>
+        <li><span class="ic"><svg><use href="#i-mail"/></svg></span><div><small>Email</small><a href="mailto:kccleaninginc@yahoo.com">kccleaninginc@yahoo.com</a></div></li>
+        <li><span class="ic"><svg><use href="#i-fb"/></svg></span><div><small>Facebook</small><a href="https://facebook.com/profile.php?id=61561417165672" target="_blank" rel="noopener">Follow KC Cleaning Inc.</a></div></li>
+      </ul>
+    </div>
+    <form class="quote" id="quote-form" novalidate>
+      <h3>Get a free quote</h3>
+      <div class="field"><label for="f-name">Name *</label><input id="f-name" name="name" autocomplete="name" required></div>
+      <div class="field"><label for="f-email">Email address *</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="f-msg">Message *</label><textarea id="f-msg" name="message" required></textarea></div>
+      <div class="hp" aria-hidden="true"><label for="f-hp">Leave this field empty</label><input id="f-hp" name="hp" tabindex="-1" autocomplete="off"></div>
+      <button class="btn btn-yellow" type="submit">Send message</button>
+      <p class="form-msg" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="https://www.kccleaninginc.ca/">
+          <img src="images/kc-cleaning-logo.svg" alt="" width="52" height="52">
+          <span><b>KC Cleaning Inc.</b><small>Commercial &amp; residential cleaning</small></span>
+        </a>
+        <p class="blurb">Family owned cleaning for Fort Saskatchewan, Sherwood Park and surrounding areas. Registered, insured and WCB covered.</p>
+        <a class="fb" href="https://facebook.com/profile.php?id=61561417165672" target="_blank" rel="noopener"><svg><use href="#i-fb"/></svg>Facebook</a>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="https://www.kccleaninginc.ca/">Home</a></li>
+          <li><a href="https://www.kccleaninginc.ca/about-us">About Us</a></li>
+          <li><a href="https://www.kccleaninginc.ca/services-offered">Services Offered</a></li>
+          <li><a href="https://www.kccleaninginc.ca/contact-us">Contact us</a></li>
+          <li><a href="https://www.kccleaninginc.ca/gallery">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+17809033790">780-903-3790</a></li>
+          <li><a href="tel:+17809130910">780-913-0910</a></li>
+          <li><a href="mailto:kccleaninginc@yahoo.com">kccleaninginc@yahoo.com</a></li>
+          <li>Fort Saskatchewan, Alberta, Canada</li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© <span id="yr">2026</span> KC Cleaning Inc. All rights reserved.</span>
+      <span>Design by <a href="https://cleaningdigital.ca/" target="_blank" rel="noopener">Cleaning Digital</a>.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-line" href="tel:+17809033790"><svg><use href="#i-phone"/></svg>Call</a>
+  <a class="btn btn-yellow" href="#contact">Free quote</a>
+</div>
+
+<script>
+(function(){
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // mobile menu
+  var mb=document.querySelector('.menu-btn'), nav=document.getElementById('mainnav');
+  mb.addEventListener('click',function(){
+    var o=nav.classList.toggle('open');
+    mb.setAttribute('aria-expanded',o);
+    mb.setAttribute('aria-label',o?'Close menu':'Open menu');
+    document.body.style.overflow=o?'hidden':'';
+  });
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');mb.setAttribute('aria-expanded','false');document.body.style.overflow='';});});
+
+  // services index
+  var btns=document.querySelectorAll('.svc-btn'), stage=document.querySelectorAll('.svc-stage img');
+  var capName=document.getElementById('cap-name'), capN=document.getElementById('cap-n');
+  btns.forEach(function(b){
+    function activate(){
+      var i=+b.dataset.i;
+      btns.forEach(function(x){x.setAttribute('aria-expanded','false');x.parentNode.classList.remove('open');});
+      b.setAttribute('aria-expanded','true');b.parentNode.classList.add('open');
+      stage.forEach(function(im,k){im.classList.toggle('on',k===i);});
+      capName.textContent=b.childNodes[0].textContent.trim();
+      capN.textContent=(i+1)+' of 6';
+    }
+    b.addEventListener('click',activate);
+    b.addEventListener('mouseenter',function(){ if(window.matchMedia('(hover:hover) and (min-width:981px)').matches) activate(); });
+  });
+
+  // frequency chips
+  var chips=document.querySelectorAll('.freq button'), note=document.querySelector('.freq-note'), cta=document.getElementById('plan-cta');
+  chips.forEach(function(c){c.addEventListener('click',function(){
+    chips.forEach(function(x){x.setAttribute('aria-pressed','false');});
+    c.setAttribute('aria-pressed','true');
+    note.textContent=c.dataset.note;
+    cta.textContent='Get a free quote for '+c.textContent.toLowerCase()+' cleaning';
+  });});
+
+  // checklist tick on view
+  var cl=document.getElementById('checklist');
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){cl.classList.add('ticked');o.disconnect();}});},{threshold:.4}).observe(cl);
+  } else cl.classList.add('ticked');
+
+  // testimonials
+  var Q=[
+    ['KC Cleaning Inc. cleans our commercial spaces. They do a fantastic job! Every time we come into a beautiful clean office. They are reliable, dependable and trustworthy. They have a high attention to detail. We highly recommend them.','Chantelle'],
+    ['I am so thankful for KC Cleaning. I hired them a few weeks before a move, but I honestly wish I would have hired them sooner! The owners are very responsive and hard working. Their attention to detail and cleaning tricks really made my home sparkle. Their work ethic and dedication to great customer service really sets them apart.','Sarah'],
+    ['Thank you and Cassandra for a beautiful job!!! I am very happy. You ladies did an amazing job I can’t thank you enough. I would recommend you to anyone that is looking for an excellent cleaner. We will have you back again!','Dawn & Stan'],
+    ['We have been using KC Cleaning the past year and they are amazing! I can’t wait for cleaning day and coming home and the house look amazing! They love our 3 pups as well and our pups love them!','Trevor & Kelly'],
+    ['Highly recommend their service!! Always friendly, professional and truly cares about their clients. They are passionate about what they do and making sure they do an effective and thorough job every single time.','Jess'],
+    ['We had KC Cleaning do a post construction clean, move out clean and then a regular clean over the last two weeks. They have done an excellent job all 3 times! They were always on time, had the supplies they needed and communicated well.','Teresa']
+  ];
+  var qt=document.getElementById('q-text'), qn=document.getElementById('q-name'), tabs=document.querySelectorAll('.who button');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected','false');});
+    t.setAttribute('aria-selected','true');
+    var q=Q[+t.dataset.q];
+    qt.classList.add('fade');
+    setTimeout(function(){qt.textContent=q[0];qn.textContent=q[1];qt.classList.remove('fade');},300);
+  });});
+
+  // form
+  var f=document.getElementById('quote-form'), fm=f.querySelector('.form-msg');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=f.name.value.trim(), em=f.email.value.trim(), m=f.message.value.trim();
+    if(!n||!em||!m){fm.textContent='Fill in your name, email address and message to send.';return;}
+    if(!/^\S+@\S+\.\S+$/.test(em)){fm.textContent='Enter a valid email address, like name@example.com.';return;}
+    window.location.href='mailto:kccleaninginc@yahoo.com?subject='+encodeURIComponent('Free quote request from '+n)+'&body='+encodeURIComponent(m+'\n\n'+n+'\n'+em);
+    fm.textContent='Opening your email app to send your message.';
+  });
+})();
+</script>
+</body>
+</html>
